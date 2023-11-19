@@ -1,4 +1,4 @@
 import boardConf
-board "unor3"
+board "promicro"
 
 --avr.any.gcc.path: "/opt/homebrew/bin"

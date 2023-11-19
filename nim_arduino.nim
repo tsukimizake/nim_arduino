@@ -6,12 +6,15 @@ import board / [times, serial, progmem]
 
 Serial.init(9600.Hz)
 Serial.send p"Hello world\n"
-Led.output()
+TXLed.output()
 
 while true:
-  Led.high()
+  TXLed.high()
+  RXLed.low()
   Serial.send p"Led is on\n"
-  delayMs(1000)
-  Led.low()
+  delayMs(100)
+  TXLed.low()
+  RXLed.high()
   Serial.send p"Led is off\n"
-  delayMs(1000)
+  delayMs(100)
+
